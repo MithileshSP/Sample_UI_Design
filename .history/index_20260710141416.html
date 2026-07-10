@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HERO4Humanity</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="site-header">
+		<nav class="navbar" id="navbar" aria-label="Primary">
+			<a class="brand" href="#home" aria-label="HERO4Humanity home">
+				<img class="brand-icon" src="assets/L.png" alt="HERO4Humanity logo">
+				<span class="brand-text brand-wordmark" aria-label="HERO4Humanity">
+					<span class="brand-name">
+						<span class="brand-name-hero">HERO</span><span class="brand-name-accent">4</span><span class="brand-name-humanity">Humanity</span>
+					</span>
+				</span>
+			</a>
+
+			<button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNavigation">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span class="sr-only">Toggle navigation</span>
+			</button>
+
+			<div class="nav-panel" id="primaryNavigation">
+				<ul class="nav-links" role="list">
+					<li><a class="nav-link active" href="#home">Home</a></li>
+					<li><a class="nav-link" href="#about">About</a></li>
+					<li><a class="nav-link" href="#programs">Programs</a></li>
+					<li><a class="nav-link" href="#impact">Impact</a></li>
+					<li><a class="nav-link" href="#resources">Resources</a></li>
+					<li><a class="nav-link" href="#contact">Contact</a></li>
+				</ul>
+
+				<div class="nav-actions">
+					<a class="partner-link" href="#contact">Become Partner</a>
+					<a class="cta-button" href="#support">Support Our Mission</a>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<section class="hero section" id="home">
+			<div class="hero-copy">
+				<p class="eyebrow">Premium nonprofit navigation</p>
+				<h1>Build trust from the first scroll.</h1>
+				<p>
+					A calm, modern header with a transparent start, glass blur on scroll, and a CTA that feels present without overpowering the page.
+				</p>
+			</div>
+		</section>
+
+		<section class="section placeholder" id="about"><h2>About</h2></section>
+		<section class="section placeholder" id="programs"><h2>Programs</h2></section>
+		<section class="section placeholder" id="impact"><h2>Impact</h2></section>
+		<section class="section placeholder" id="resources"><h2>Resources</h2></section>
+		<section class="section placeholder" id="contact"><h2>Contact</h2></section>
+		<section class="section placeholder" id="support"><h2>Support</h2></section>
+	</main>
+
+	<script>
+		const navbar = document.getElementById('navbar');
+		const navToggle = document.getElementById('navToggle');
+		const primaryNavigation = document.getElementById('primaryNavigation');
+		const navLinks = [...document.querySelectorAll('.nav-link')];
+
+		const setScrolledState = () => {
+			navbar.classList.toggle('is-scrolled', window.scrollY > 12);
+		};
+
+		const setActiveLink = (targetHash) => {
+			navLinks.forEach((link) => {
+				link.classList.toggle('active', link.getAttribute('href') === targetHash);
+			});
+		};
+
+		window.addEventListener('scroll', setScrolledState, { passive: true });
+		setScrolledState();
+
+		navLinks.forEach((link) => {
+			link.addEventListener('click', () => {
+				setActiveLink(link.getAttribute('href'));
+				primaryNavigation.classList.remove('is-open');
+				navToggle.setAttribute('aria-expanded', 'false');
+			});
+		});
+
+		navToggle.addEventListener('click', () => {
+			const isOpen = primaryNavigation.classList.toggle('is-open');
+			navToggle.setAttribute('aria-expanded', String(isOpen));
+		});
+
+		const sections = navLinks
+			.map((link) => document.querySelector(link.getAttribute('href')))
+			.filter(Boolean);
+
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					setActiveLink(`#${entry.target.id}`);
+				}
+			});
+		}, { rootMargin: '-45% 0px -45% 0px', threshold: 0.1 });
+
+		sections.forEach((section) => observer.observe(section));
+	</script>
+</body>
+</html>

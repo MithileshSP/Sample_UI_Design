@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HERO4Humanity</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="site-header">
+		<nav class="navbar" id="navbar" aria-label="Primary">
+			<a class="brand" href="#home" aria-label="HERO4Humanity home">
+				<img class="brand-icon" src="assets/L.png" alt="HERO4Humanity logo">
+				<span class="brand-text brand-wordmark" aria-label="HERO4Humanity">
+					<span class="brand-name">
+						<span class="brand-name-hero">HERO</span><span class="brand-name-accent">4</span><span class="brand-name-humanity">Humanity</span>
+					</span>
+				</span>
+			</a>
+
+			<button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNavigation">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span class="sr-only">Toggle navigation</span>
+			</button>
+
+			<div class="nav-panel" id="primaryNavigation">
+				<ul class="nav-links" role="list">
+					<li><a class="nav-link active" href="#home">Home</a></li>
+					<li><a class="nav-link" href="#about">About</a></li>
+					<li><a class="nav-link" href="#programs">Programs</a></li>
+					<li><a class="nav-link" href="#impact">Impact</a></li>
+					<li><a class="nav-link" href="#resources">Resources</a></li>
+					<li><a class="nav-link" href="#contact">Contact</a></li>
+				</ul>
+
+				<div class="nav-actions">
+					<a class="partner-link" href="#contact">Become Partner</a>
+					<a class="cta-button" href="#support">Support Our Mission</a>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<section class="hero section" id="home">
+			<div class="hero-grid">
+				<div class="hero-copy">
+					<p class="hero-badge reveal" style="--delay: 0ms;"><span class="hero-badge-main">Building Human Potential</span><span class="hero-badge-sub">Since 2018</span></p>
+					<h1 class="reveal" style="--delay: 100ms;">
+						<span>Education.</span>
+						<span>Health.</span>
+						<span>Opportunity.</span>
+					</h1>
+					<p class="hero-summary reveal" style="--delay: 200ms;">Creating sustainable impact for communities worldwide.</p>
+
+					<div class="hero-actions reveal" style="--delay: 300ms;">
+						<a class="primary-action" href="#programs">Explore Programs</a>
+						<a class="secondary-action" href="#contact">Become a Partner</a>
+					</div>
+
+					<div class="story-selector reveal" style="--delay: 500ms;" aria-label="Discover our story">
+						<div class="story-selector-label">Discover Our Story</div>
+						<div class="story-selector-list" role="tablist" aria-label="Story themes">
+							<button class="story-pill is-active" type="button" data-story="0">1</button>
+							<button class="story-pill" type="button" data-story="1">2</button>
+							<button class="story-pill" type="button" data-story="2">3</button>
+							<button class="story-pill" type="button" data-story="3">4</button>
+							<button class="story-pill" type="button" data-story="4">5</button>
+						</div>
+						<div class="story-copy" id="storyCopy">Start with people and mentorship that inspires confidence</div>
+					</div>
+				</div>
+
+				<div class="hero-media reveal" style="--delay: 600ms;">
+					<div class="hero-image-frame">
+						<img id="heroImage" class="hero-image" src="assets/Section 2/1.jpeg" alt="Community impact story image">
+						<div class="hero-image-overlay"></div>
+					</div>
+
+					<div class="stats-card reveal" style="--delay: 700ms;">
+						<div class="stat-item">
+							<strong>45000+</strong>
+							<span>Lives Impacted</span>
+						</div>
+						<div class="stat-item">
+							<strong>120</strong>
+							<span>Programs</span>
+						</div>
+						<div class="stat-item">
+							<strong>15</strong>
+							<span>Countries</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section placeholder" id="about"><h2>About</h2></section>
+		<section class="section placeholder" id="programs"><h2>Programs</h2></section>
+		<section class="section placeholder" id="impact"><h2>Impact</h2></section>
+		<section class="section placeholder" id="resources"><h2>Resources</h2></section>
+		<section class="section placeholder" id="contact"><h2>Contact</h2></section>
+		<section class="section placeholder" id="support"><h2>Support</h2></section>
+	</main>
+
+	<script>
+		const navbar = document.getElementById('navbar');
+		const navToggle = document.getElementById('navToggle');
+		const primaryNavigation = document.getElementById('primaryNavigation');
+		const navLinks = [...document.querySelectorAll('.nav-link')];
+		const heroImage = document.getElementById('heroImage');
+		const storyCopy = document.getElementById('storyCopy');
+		const storyPills = [...document.querySelectorAll('.story-pill')];
+
+		const storyThemes = [
+			{
+				image: 'assets/Section 2/1.jpeg',
+				copy: 'Start with people and mentorship that inspires confidence',
+				focus: '50% 22%'
+			},
+			{
+				image: 'assets/Section 2/2.jpeg',
+				copy: 'Innovative learning bridging the digital divide for future readiness',
+				focus: '50% 28%'
+			},
+			{
+				image: 'assets/Section 2/3.jpeg',
+				copy: 'Reaching the most remote communities with access to quality education',
+				focus: '50% 25%'
+			},
+			{
+				image: 'assets/Section 2/4.jpeg',
+				copy: 'Skills for life preparing youth for the modern economy',
+				focus: '50% 30%'
+			},
+			{
+				image: 'assets/Section 2/5.jpeg',
+				copy: 'Building strong roots for lifelong growth and curiosity',
+				focus: '50% 20%'
+			}
+		];
+
+		const setStoryTheme = (index) => {
+			const theme = storyThemes[index];
+			if (!theme) {
+				return;
+			}
+
+			heroImage.src = theme.image;
+			heroImage.alt = theme.copy;
+			heroImage.style.objectPosition = theme.focus;
+			storyCopy.textContent = theme.copy;
+			storyPills.forEach((pill, pillIndex) => {
+				pill.classList.toggle('is-active', pillIndex === index);
+			});
+		};
+
+		const setScrolledState = () => {
+			navbar.classList.toggle('is-scrolled', window.scrollY > 12);
+		};
+
+		const setActiveLink = (targetHash) => {
+			navLinks.forEach((link) => {
+				link.classList.toggle('active', link.getAttribute('href') === targetHash);
+			});
+		};
+
+		window.addEventListener('scroll', setScrolledState, { passive: true });
+		setScrolledState();
+
+		navLinks.forEach((link) => {
+			link.addEventListener('click', () => {
+				setActiveLink(link.getAttribute('href'));
+				primaryNavigation.classList.remove('is-open');
+				navToggle.setAttribute('aria-expanded', 'false');
+			});
+		});
+
+		navToggle.addEventListener('click', () => {
+			const isOpen = primaryNavigation.classList.toggle('is-open');
+			navToggle.setAttribute('aria-expanded', String(isOpen));
+		});
+
+		storyPills.forEach((pill) => {
+			pill.addEventListener('click', () => {
+				setStoryTheme(Number(pill.dataset.story));
+			});
+		});
+
+		setStoryTheme(0);
+
+		const sections = navLinks
+			.map((link) => document.querySelector(link.getAttribute('href')))
+			.filter(Boolean);
+
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					setActiveLink(`#${entry.target.id}`);
+				}
+			});
+		}, { rootMargin: '-45% 0px -45% 0px', threshold: 0.1 });
+
+		sections.forEach((section) => observer.observe(section));
+	</script>
+</body>
+</html>

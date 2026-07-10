@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HERO4Humanity — Education. Health. Opportunity.</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div class="grain" aria-hidden="true"></div>
+
+	<header class="site-header">
+		<nav class="navbar" id="navbar" aria-label="Primary">
+			<a class="brand" href="#home" aria-label="HERO4Humanity home">
+				<span class="brand-mark" aria-hidden="true">
+					<svg viewBox="0 0 64 64" fill="none">
+						<circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="2" opacity="0.35"/>
+						<path d="M32 8 L34.4 20 L32 18 L29.6 20 Z" fill="currentColor" opacity="0.6"/>
+						<path d="M32 56 L34.4 44 L32 46 L29.6 44 Z" fill="currentColor" opacity="0.6"/>
+						<path d="M8 32 L20 29.6 L18 32 L20 34.4 Z" fill="currentColor" opacity="0.6"/>
+						<path d="M56 32 L44 29.6 L46 32 L44 34.4 Z" fill="currentColor" opacity="0.6"/>
+						<circle cx="32" cy="26" r="6" fill="currentColor"/>
+						<path d="M20 48c0-8 5.4-14 12-14s12 6 12 14" stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none"/>
+					</svg>
+				</span>
+				<span class="brand-text">
+					<span class="brand-name-hero">HERO</span><span class="brand-name-accent">4</span><span class="brand-name-humanity">Humanity</span>
+				</span>
+			</a>
+
+			<button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNavigation">
+				<span></span><span></span><span></span>
+				<span class="sr-only">Toggle navigation</span>
+			</button>
+
+			<div class="nav-panel" id="primaryNavigation">
+				<ul class="nav-links" role="list">
+					<li><a class="nav-link active" href="#home">Home</a></li>
+					<li><a class="nav-link" href="#about">About</a></li>
+					<li><a class="nav-link" href="#programs">Programs</a></li>
+					<li><a class="nav-link" href="#impact">Impact</a></li>
+					<li><a class="nav-link" href="#resources">Resources</a></li>
+					<li><a class="nav-link" href="#contact">Contact</a></li>
+				</ul>
+
+				<div class="nav-actions">
+					<a class="partner-link" href="#contact">Become Partner</a>
+					<a class="cta-button" href="#support">
+						<span>Support Our Mission</span>
+					</a>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<section class="hero section" id="home">
+			<div class="hero-glow" aria-hidden="true"></div>
+
+			<div class="hero-grid">
+				<div class="hero-copy">
+					<p class="hero-badge reveal" style="--delay: 0ms;">
+						<span class="hero-badge-dot" aria-hidden="true"></span>
+						<span class="hero-badge-main">Building Human Potential</span>
+						<span class="hero-badge-sub">Since 2018</span>
+					</p>
+
+					<h1 class="hero-heading">
+						<span class="heading-line reveal" style="--delay: 90ms; --pillar: var(--emerald);">Education.</span>
+						<span class="heading-line reveal" style="--delay: 180ms; --pillar: var(--gold);">Health.</span>
+						<span class="heading-line reveal" style="--delay: 270ms; --pillar: var(--navy);">Opportunity.</span>
+					</h1>
+
+					<p class="hero-summary reveal" style="--delay: 360ms;">Creating sustainable impact for communities worldwide — through people-centred programs that build lasting capability, not dependency.</p>
+
+					<div class="hero-actions reveal" style="--delay: 440ms;">
+						<a class="primary-action" href="#programs"><span>Explore Programs</span></a>
+						<a class="secondary-action" href="#contact"><span>Become a Partner</span></a>
+					</div>
+
+					<div class="story-selector reveal" style="--delay: 560ms;" aria-label="Discover our story">
+						<div class="story-selector-head">
+							<span class="story-selector-label">Discover Our Story</span>
+							<span class="story-selector-count"><span id="storyIndex">01</span> / 05</span>
+						</div>
+
+						<div class="story-path" role="tablist" aria-label="Story themes">
+							<svg class="story-path-line" viewBox="0 0 480 40" preserveAspectRatio="none" aria-hidden="true">
+								<path id="pathTrack" d="M10,20 C 100,2 160,38 240,20 C 320,2 380,38 470,20" />
+								<path id="pathFill" d="M10,20 C 100,2 160,38 240,20 C 320,2 380,38 470,20" />
+							</svg>
+							<button class="story-pill is-active" type="button" data-story="0" style="--pos: 0%;"><span>01</span></button>
+							<button class="story-pill" type="button" data-story="1" style="--pos: 25%;"><span>02</span></button>
+							<button class="story-pill" type="button" data-story="2" style="--pos: 50%;"><span>03</span></button>
+							<button class="story-pill" type="button" data-story="3" style="--pos: 75%;"><span>04</span></button>
+							<button class="story-pill" type="button" data-story="4" style="--pos: 100%;"><span>05</span></button>
+						</div>
+
+						<p class="story-copy" id="storyCopy">Start with people and mentorship that inspires confidence</p>
+					</div>
+				</div>
+
+				<div class="hero-media reveal" style="--delay: 500ms;">
+					<div class="hero-image-frame">
+						<div class="hero-image-outline" aria-hidden="true"></div>
+						<img id="heroImage" class="hero-image" src="assets/hero/1.jpeg" alt="Community impact story image">
+						<div class="hero-image-overlay"></div>
+						<span class="hero-image-tag">Kampala, Uganda</span>
+					</div>
+
+					<div class="stats-card">
+						<div class="stat-item">
+							<strong data-count="45000" data-suffix="+">0</strong>
+							<span>Lives Impacted</span>
+						</div>
+						<div class="stat-item">
+							<strong data-count="120">0</strong>
+							<span>Programs</span>
+						</div>
+						<div class="stat-item">
+							<strong data-count="15">0</strong>
+							<span>Countries</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<a class="scroll-cue" href="#about">
+				<span class="scroll-cue-line" aria-hidden="true"></span>
+				<span class="scroll-cue-label">Scroll to explore</span>
+			</a>
+		</section>
+
+		<section class="section placeholder" id="about"><h2>About — content coming next</h2></section>
+		<section class="section placeholder" id="programs"><h2>Programs — content coming next</h2></section>
+		<section class="section placeholder" id="impact"><h2>Impact — content coming next</h2></section>
+		<section class="section placeholder" id="resources"><h2>Resources — content coming next</h2></section>
+		<section class="section placeholder" id="contact"><h2>Contact — content coming next</h2></section>
+		<section class="section placeholder" id="support"><h2>Support — content coming next</h2></section>
+	</main>
+
+	<script>
+		const navbar = document.getElementById('navbar');
+		const navToggle = document.getElementById('navToggle');
+		const primaryNavigation = document.getElementById('primaryNavigation');
+		const navLinks = [...document.querySelectorAll('.nav-link')];
+		const heroImage = document.getElementById('heroImage');
+		const heroImageTag = document.querySelector('.hero-image-tag');
+		const storyCopy = document.getElementById('storyCopy');
+		const storyIndexEl = document.getElementById('storyIndex');
+		const storyPills = [...document.querySelectorAll('.story-pill')];
+		const pathFill = document.getElementById('pathFill');
+		const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+		const storyThemes = [
+			{ image: 'assets/hero/1.jpeg', copy: 'Start with people and mentorship that inspires confidence', place: 'Kampala, Uganda', focus: '50% 22%' },
+			{ image: 'assets/hero/2.jpeg', copy: 'Hands-on learning that bridges the digital divide for future readiness', place: 'Warsaw, Poland', focus: '50% 28%' },
+			{ image: 'assets/hero/3.jpeg', copy: 'Reaching every classroom with access to quality foundational learning', place: 'Accra, Ghana', focus: '50% 22%' },
+			{ image: 'assets/hero/4.jpeg', copy: 'Building real skills for the modern economy, one project at a time', place: 'Lagos, Nigeria', focus: '50% 30%' },
+			{ image: 'assets/hero/5.jpeg', copy: 'Meeting communities where they are, building strong roots for growth', place: 'Kigali, Rwanda', focus: '50% 25%' }
+		];
+
+		const pathLength = pathFill.getTotalLength();
+		pathFill.style.strokeDasharray = `${pathLength}`;
+
+		const setStoryTheme = (index, opts = {}) => {
+			const theme = storyThemes[index];
+			if (!theme) return;
+
+			heroImage.style.opacity = '0';
+			window.setTimeout(() => {
+				heroImage.src = theme.image;
+				heroImage.alt = theme.copy;
+				heroImage.style.objectPosition = theme.focus;
+				heroImage.style.opacity = '1';
+			}, opts.silent ? 0 : 180);
+
+			heroImageTag.textContent = theme.place;
+			storyCopy.style.opacity = '0';
+			window.setTimeout(() => {
+				storyCopy.textContent = theme.copy;
+				storyCopy.style.opacity = '1';
+			}, 150);
+			storyIndexEl.textContent = String(index + 1).padStart(2, '0');
+
+			storyPills.forEach((pill, i) => pill.classList.toggle('is-active', i === index));
+
+			const frac = index / (storyThemes.length - 1);
+			pathFill.style.strokeDashoffset = `${pathLength * (1 - frac)}`;
+		};
+
+		const setScrolledState = () => navbar.classList.toggle('is-scrolled', window.scrollY > 12);
+		window.addEventListener('scroll', setScrolledState, { passive: true });
+		setScrolledState();
+
+		const setActiveLink = (targetHash) => {
+			navLinks.forEach((link) => link.classList.toggle('active', link.getAttribute('href') === targetHash));
+		};
+
+		navLinks.forEach((link) => {
+			link.addEventListener('click', () => {
+				setActiveLink(link.getAttribute('href'));
+				primaryNavigation.classList.remove('is-open');
+				navToggle.setAttribute('aria-expanded', 'false');
+			});
+		});
+
+		navToggle.addEventListener('click', () => {
+			const isOpen = primaryNavigation.classList.toggle('is-open');
+			navToggle.setAttribute('aria-expanded', String(isOpen));
+		});
+
+		let autoplayTimer;
+		let currentIndex = 0;
+		const startAutoplay = () => {
+			if (reduceMotion) return;
+			autoplayTimer = window.setInterval(() => {
+				currentIndex = (currentIndex + 1) % storyThemes.length;
+				setStoryTheme(currentIndex);
+			}, 5200);
+		};
+		const stopAutoplay = () => window.clearInterval(autoplayTimer);
+
+		storyPills.forEach((pill) => {
+			pill.addEventListener('click', () => {
+				currentIndex = Number(pill.dataset.story);
+				setStoryTheme(currentIndex);
+				stopAutoplay();
+				startAutoplay();
+			});
+		});
+
+		setStoryTheme(0, { silent: true });
+		startAutoplay();
+
+		// Count-up stats
+		const statEls = document.querySelectorAll('.stat-item strong');
+		const animateCount = (el) => {
+			const target = Number(el.dataset.count);
+			const suffix = el.dataset.suffix || '';
+			const duration = 1400;
+			const start = performance.now();
+			const step = (now) => {
+				const p = Math.min((now - start) / duration, 1);
+				const eased = 1 - Math.pow(1 - p, 3);
+				el.textContent = Math.round(target * eased).toLocaleString() + (p === 1 ? suffix : '');
+				if (p < 1) requestAnimationFrame(step);
+			};
+			if (reduceMotion) {
+				el.textContent = target.toLocaleString() + suffix;
+			} else {
+				requestAnimationFrame(step);
+			}
+		};
+		const statsObserver = new IntersectionObserver((entries, obs) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					statEls.forEach(animateCount);
+					obs.disconnect();
+				}
+			});
+		}, { threshold: 0.4 });
+		const statsCard = document.querySelector('.stats-card');
+		if (statsCard) statsObserver.observe(statsCard);
+
+		// Subtle parallax tilt on hero image (desktop, pointer-fine only)
+		const frame = document.querySelector('.hero-image-frame');
+		if (frame && window.matchMedia('(pointer: fine)').matches && !reduceMotion) {
+			frame.addEventListener('mousemove', (e) => {
+				const rect = frame.getBoundingClientRect();
+				const x = (e.clientX - rect.left) / rect.width - 0.5;
+				const y = (e.clientY - rect.top) / rect.height - 0.5;
+				frame.style.transform = `rotateY(${x * 4}deg) rotateX(${y * -4}deg)`;
+			});
+			frame.addEventListener('mouseleave', () => {
+				frame.style.transform = 'rotateY(0deg) rotateX(0deg)';
+			});
+		}
+
+		const sections = navLinks.map((link) => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) setActiveLink(`#${entry.target.id}`);
+			});
+		}, { rootMargin: '-45% 0px -45% 0px', threshold: 0.1 });
+		sections.forEach((section) => observer.observe(section));
+	</script>
+</body>
+</html>
