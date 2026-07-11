@@ -6,7 +6,7 @@
 	<title>HERO4Humanity — Education. Health. Opportunity.</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -48,130 +48,510 @@
 	</header>
 
 	<main>
-		<section class="hero section" id="home">
-			<div class="hero-glow" aria-hidden="true"></div>
+		<section class="hero" id="home">
 
-			<div class="hero-grid">
-				<div class="hero-copy">
-					<p class="hero-badge reveal" style="--delay: 0ms;">
-						<span class="hero-badge-dot" aria-hidden="true"></span>
-						<span class="hero-badge-main">Building Human Potential</span>
-						<span class="hero-badge-sub">Since 2018</span>
-					</p>
+			<!-- Creative atmospheric background: human potential theme -->
+			<div class="hero-atmosphere" aria-hidden="true">
+				<svg class="hero-atm-svg" viewBox="0 0 1440 800" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+					<defs>
+						<radialGradient id="atm-g1" cx="18%" cy="55%" r="45%">
+							<stop offset="0%" stop-color="#1F7A5C" stop-opacity="0.09"/>
+							<stop offset="100%" stop-color="#1F7A5C" stop-opacity="0"/>
+						</radialGradient>
+						<radialGradient id="atm-g2" cx="75%" cy="25%" r="38%">
+							<stop offset="0%" stop-color="#E8A33D" stop-opacity="0.07"/>
+							<stop offset="100%" stop-color="#E8A33D" stop-opacity="0"/>
+						</radialGradient>
+						<radialGradient id="atm-g3" cx="50%" cy="5%" r="55%">
+							<stop offset="0%" stop-color="#FBF8F2" stop-opacity="0.7"/>
+							<stop offset="100%" stop-color="#FBF8F2" stop-opacity="0"/>
+						</radialGradient>
+					</defs>
+					<!-- Soft warm glows filling the full canvas -->
+					<rect width="1440" height="800" fill="#FBF8F2"/>
+					<ellipse cx="260" cy="440" rx="520" ry="420" fill="url(#atm-g1)"/>
+					<ellipse cx="1080" cy="200" rx="420" ry="340" fill="url(#atm-g2)"/>
+					<ellipse cx="720" cy="0" rx="700" ry="380" fill="url(#atm-g3)"/>
 
-					<h1 class="hero-heading">
-						<span class="heading-line reveal" style="--delay: 90ms; --pillar: var(--emerald);">Education.</span>
-						<span class="heading-line reveal" style="--delay: 180ms; --pillar: var(--gold);">Health.</span>
-						<span class="heading-line reveal" style="--delay: 270ms; --pillar: var(--navy);">Opportunity.</span>
-					</h1>
-
-					<p class="hero-summary reveal" style="--delay: 360ms;">Creating sustainable impact for communities worldwide — through people-centred programs that build lasting capability, not dependency.</p>
-
-					<div class="hero-actions reveal" style="--delay: 440ms;">
-						<a class="primary-action" href="#programs"><span>Explore Programs</span></a>
-						<a class="secondary-action" href="#contact"><span>Become a Partner</span></a>
-					</div>
-
-					<div class="story-selector reveal" style="--delay: 560ms;" aria-label="Discover our story">
-						<div class="story-selector-head">
-							<span class="story-selector-label">Discover Our Story</span>
-							<span class="story-selector-count"><span id="storyIndex">01</span> / 05</span>
-						</div>
-
-						<div class="story-path" role="tablist" aria-label="Story themes">
-							<svg class="story-path-line" viewBox="0 0 480 40" preserveAspectRatio="none" aria-hidden="true">
-								<path id="pathTrack" d="M10,20 C 100,2 160,38 240,20 C 320,2 380,38 470,20" />
-								<path id="pathFill" d="M10,20 C 100,2 160,38 240,20 C 320,2 380,38 470,20" />
-							</svg>
-							<button class="story-pill is-active" type="button" data-story="0" style="--pos: 0%;"><span>01</span></button>
-							<button class="story-pill" type="button" data-story="1" style="--pos: 25%;"><span>02</span></button>
-							<button class="story-pill" type="button" data-story="2" style="--pos: 50%;"><span>03</span></button>
-							<button class="story-pill" type="button" data-story="3" style="--pos: 75%;"><span>04</span></button>
-							<button class="story-pill" type="button" data-story="4" style="--pos: 100%;"><span>05</span></button>
-						</div>
-
-						<p class="story-copy" id="storyCopy">Start with people and mentorship that inspires confidence</p>
-					</div>
-				</div>
-
-				<div class="hero-media reveal" style="--delay: 500ms;">
-					<div class="hero-image-frame">
-						<div class="hero-image-outline" aria-hidden="true"></div>
-						<img id="heroImage" class="hero-image" src="assets/Section 2/1.jpeg" alt="Community impact story image">
-						<div class="hero-image-overlay"></div>
-						<span class="hero-image-tag">Kampala, Uganda</span>
-					</div>
-
-					<div class="stats-card">
-						<div class="stat-item">
-							<strong data-count="45000" data-suffix="+">0</strong>
-							<span>Lives Impacted</span>
-						</div>
-						<div class="stat-item">
-							<strong data-count="120">0</strong>
-							<span>Programs</span>
-						</div>
-						<div class="stat-item">
-							<strong data-count="15">0</strong>
-							<span>Countries</span>
-						</div>
-					</div>
-				</div>
+					<!-- Human potential network — left quadrant -->
+					<g stroke="#1F7A5C" fill="none" stroke-width="1" opacity="0.10">
+						<line x1="60" y1="260" x2="210" y2="380"/>
+						<line x1="210" y1="380" x2="380" y2="300"/>
+						<line x1="380" y1="300" x2="460" y2="440"/>
+						<line x1="60" y1="260" x2="380" y2="300"/>
+						<line x1="210" y1="380" x2="130" y2="530"/>
+						<line x1="130" y1="530" x2="320" y2="570"/>
+						<line x1="320" y1="570" x2="460" y2="440"/>
+						<line x1="380" y1="300" x2="310" y2="150"/>
+						<line x1="310" y1="150" x2="160" y2="100"/>
+					</g>
+					<!-- Network nodes -->
+					<g fill="#1F7A5C" opacity="0.18">
+						<circle cx="60" cy="260" r="5"/>
+						<circle cx="210" cy="380" r="9"/>
+						<circle cx="380" cy="300" r="7"/>
+						<circle cx="460" cy="440" r="5"/>
+						<circle cx="130" cy="530" r="4"/>
+						<circle cx="320" cy="570" r="6"/>
+						<circle cx="310" cy="150" r="5"/>
+						<circle cx="160" cy="100" r="4"/>
+					</g>
+					<!-- Concentric ripple rings centred on main hub -->
+					<g stroke="#1F7A5C" fill="none" opacity="0.05">
+						<circle cx="210" cy="380" r="70" stroke-width="1"/>
+						<circle cx="210" cy="380" r="130" stroke-width="0.8"/>
+						<circle cx="210" cy="380" r="200" stroke-width="0.5"/>
+					</g>
+					<!-- Growth arc (dashed gold): progress upward -->
+					<path d="M 0 700 Q 280 480 560 430 Q 800 400 960 340" stroke="#E8A33D" stroke-width="1.5" fill="none" opacity="0.09" stroke-dasharray="7 9"/>
+					<!-- Spark particles -->
+					<g fill="#E8A33D" opacity="0.20">
+						<circle cx="50" cy="140" r="1.5"/>
+						<circle cx="170" cy="640" r="1.5"/>
+						<circle cx="400" cy="100" r="2"/>
+						<circle cx="490" cy="230" r="1.5"/>
+						<circle cx="55" cy="480" r="1"/>
+						<circle cx="270" cy="710" r="1.5"/>
+					</g>
+					<g fill="#1F7A5C" opacity="0.13">
+						<circle cx="440" cy="60" r="2"/>
+						<circle cx="30" cy="360" r="1.5"/>
+						<circle cx="500" cy="170" r="1"/>
+						<circle cx="140" cy="750" r="2"/>
+					</g>
+				</svg>
 			</div>
 
-			<a class="scroll-cue" href="#about">
-				<span class="scroll-cue-line" aria-hidden="true"></span>
-				<span class="scroll-cue-label">Scroll to explore</span>
-			</a>
+			<div class="hero-inner">
+				<div class="hero-grid">
+					<div class="hero-copy">
+						<p class="hero-badge reveal" style="--delay: 0ms;">
+							<span class="hero-badge-dot" aria-hidden="true"></span>
+							<span class="hero-badge-main">Building Human Potential</span>
+							<span class="hero-badge-sub">Since 2018</span>
+						</p>
+
+						<h1 class="hero-heading" id="heroHeading">
+							<span class="heading-line reveal" style="--delay: 100ms;">Education.</span>
+							<span class="heading-line reveal" style="--delay: 200ms;">Health.</span>
+							<span class="heading-line reveal" style="--delay: 300ms;">Opportunity.</span>
+						</h1>
+
+						<p class="hero-summary reveal" id="heroSummary" style="--delay: 400ms;">Start with people and mentorship that inspires confidence.</p>
+
+						<div class="hero-actions reveal" style="--delay: 500ms;">
+							<a class="primary-action" href="#programs"><span>Explore Programs</span></a>
+							<a class="secondary-action" href="#contact"><span>Become a Partner</span></a>
+						</div>
+
+						<div class="story-selector reveal" style="--delay: 600ms;" aria-label="Discover our story">
+							<div class="story-selector-head">
+								<span class="story-selector-label">Discover Our Story</span>
+								<span class="story-selector-count"><span id="storyIndex">01</span> / 05</span>
+							</div>
+
+							<div class="story-path" role="tablist" aria-label="Story themes">
+								<div class="story-progress-bg"></div>
+								<div class="story-progress-fill" id="storyProgressFill"></div>
+								<button class="story-pill is-active" type="button" data-story="0" style="--pos: 0%;"><span>01</span></button>
+								<button class="story-pill" type="button" data-story="1" style="--pos: 25%;"><span>02</span></button>
+								<button class="story-pill" type="button" data-story="2" style="--pos: 50%;"><span>03</span></button>
+								<button class="story-pill" type="button" data-story="3" style="--pos: 75%;"><span>04</span></button>
+								<button class="story-pill" type="button" data-story="4" style="--pos: 100%;"><span>05</span></button>
+							</div>
+						</div>
+					</div>
+
+					<div class="hero-media reveal" style="--delay: 700ms;">
+						<div class="hero-image-frame">
+							<img id="heroImage1" class="hero-image active" src="assets/Section 2/1.jpeg" alt="Community impact story image" style="opacity: 1; z-index: 1;">
+							<img id="heroImage2" class="hero-image" src="" alt="Community impact story image" style="opacity: 0; z-index: 0;">
+							<div class="hero-image-overlay"></div>
+							<span class="hero-image-tag" id="heroImageTag">Mentorship Program</span>
+						</div>
+
+						<div class="stats-card reveal" style="--delay: 850ms;">
+							<div class="stat-item">
+								<strong data-count="45000" data-suffix="+">0</strong>
+								<span>Lives Impacted</span>
+							</div>
+							<div class="stat-item">
+								<strong data-count="120">0</strong>
+								<span>Programs</span>
+							</div>
+							<div class="stat-item">
+								<strong data-count="15">0</strong>
+								<span>Countries</span>
+							</div>
+						</div>
+					</div>
+						<a class="scroll-cue" href="#about">
+						<span class="scroll-cue-line" aria-hidden="true"></span>
+						<span class="scroll-cue-label">Scroll to explore</span>
+					</a>
+				</div>
+			</div>
 		</section>
 
-		<section class="about section" id="about">
-			<div class="about-grid">
-				<div class="about-intro scroll-reveal">
-					<span class="eyebrow"><span class="eyebrow-line"></span>Why We Exist</span>
-					<h2 class="about-heading">Potential is universal.<br>Opportunity is not.</h2>
-					<p class="about-lead">Too many people are locked out of opportunity — not because they lack talent, intelligence, or ambition, but because the systems around them fail to educate, equip, or include them.</p>
-					<blockquote class="about-quote">
-						<p>“Change does not come from saviours — it comes from people. We believe everyone has the capacity to be a HERO4Humanity.”</p>
+		<section class="challenge" id="about">
+
+			<!-- Neural-net background SVG -->
+			<div class="challenge-bg" aria-hidden="true">
+				<svg viewBox="0 0 1440 900" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
+					<!-- connection lines -->
+					<g stroke="rgba(251,248,242,0.035)" stroke-width="1" fill="none">
+						<line x1="0" y1="200" x2="360" y2="400"/><line x1="360" y1="400" x2="720" y2="300"/>
+						<line x1="720" y1="300" x2="1080" y2="500"/><line x1="1080" y1="500" x2="1440" y2="350"/>
+						<line x1="180" y1="650" x2="540" y2="480"/><line x1="540" y1="480" x2="900" y2="600"/>
+						<line x1="900" y1="600" x2="1260" y2="420"/><line x1="360" y1="400" x2="540" y2="480"/>
+						<line x1="720" y1="300" x2="900" y2="600"/><line x1="1080" y1="500" x2="1260" y2="420"/>
+						<line x1="0" y1="450" x2="180" y2="650"/><line x1="180" y1="100" x2="360" y2="400"/>
+						<line x1="900" y1="150" x2="1080" y2="500"/><line x1="1260" y1="80" x2="1440" y2="350"/>
+					</g>
+					<!-- nodes -->
+					<g fill="rgba(251,248,242,0.05)">
+						<circle cx="360" cy="400" r="4"/><circle cx="720" cy="300" r="6"/>
+						<circle cx="1080" cy="500" r="4"/><circle cx="540" cy="480" r="5"/>
+						<circle cx="900" cy="600" r="4"/><circle cx="1260" cy="420" r="3"/>
+						<circle cx="180" cy="650" r="3"/>
+					</g>
+					<!-- faded watermark -->
+					<text x="50%" y="52%" text-anchor="middle" font-family="serif" font-size="260" font-weight="700" fill="rgba(251,248,242,0.018)" dominant-baseline="middle" letter-spacing="-10">GAP</text>
+				</svg>
+			</div>
+
+			<div class="challenge-inner">
+
+				<!-- Eyebrow -->
+				<div class="c-eyebrow scroll-reveal">
+					<span class="c-eyebrow-line"></span>
+					<span class="c-eyebrow-text">The Challenge</span>
+					<span class="c-eyebrow-line"></span>
+				</div>
+
+				<!-- Act 1: The Setup -->
+				<p class="c-act1 scroll-reveal">
+					Across the world, people are not falling behind because they lack
+					<span class="c-highlight">talent</span>,
+					<span class="c-highlight">motivation</span>,
+					or <span class="c-highlight">ambition</span>.
+				</p>
+
+				<!-- Act 2: The Pivot -->
+				<div class="c-pivot scroll-reveal">
+					<p>They are falling behind because the systems around them are <em>not designed to work for them.</em></p>
+				</div>
+
+				<!-- Gap Visual -->
+				<div class="c-gap scroll-reveal">
+					<div class="c-gap-bar">
+						<div class="c-gap-side">
+							<span class="c-gap-label">Potential</span>
+							<div class="c-gap-track c-gap-track--left"></div>
+						</div>
+						<div class="c-gap-break">
+							<svg viewBox="0 0 56 36" width="56" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<polyline points="0,18 10,4 20,32 30,4 40,32 56,18" stroke="#E8A33D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+							<span class="c-gap-break-label">widening gap</span>
+						</div>
+						<div class="c-gap-side c-gap-side--right">
+							<div class="c-gap-track c-gap-track--right"></div>
+							<span class="c-gap-label c-gap-label--right">Progress</span>
+						</div>
+					</div>
+					<h2 class="c-gap-heading">A widening gap between potential and progress</h2>
+				</div>
+
+				<!-- Three Consequence Tiles -->
+				<div class="c-tiles">
+					<article class="c-tile scroll-reveal" style="--sr-delay: 0ms;">
+						<span class="c-tile-num">01</span>
+						<svg class="c-tile-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="20" cy="13" r="6" stroke="#E8A33D" stroke-width="1.5"/>
+							<path d="M8 36c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="#E8A33D" stroke-width="1.5" stroke-linecap="round"/>
+							<line x1="33" y1="20" x2="40" y2="20" stroke="#E8A33D" stroke-width="1.5" stroke-dasharray="3 3"/>
+						</svg>
+						<p>People with the ability to contribute meaningfully are <strong>excluded from opportunity</strong>.</p>
+					</article>
+					<article class="c-tile scroll-reveal" style="--sr-delay: 120ms;">
+						<span class="c-tile-num">02</span>
+						<svg class="c-tile-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="20" cy="20" r="9" stroke="#E8A33D" stroke-width="1.5"/>
+							<circle cx="7" cy="20" r="4" stroke="#E8A33D" stroke-width="1"/>
+							<circle cx="33" cy="20" r="4" stroke="#E8A33D" stroke-width="1"/>
+							<line x1="11" y1="20" x2="11" y2="20" stroke="#E8A33D" stroke-width="1.5" stroke-dasharray="2 3"/>
+							<line x1="29" y1="20" x2="29" y2="20" stroke="#E8A33D" stroke-width="1.5" stroke-dasharray="2 3"/>
+						</svg>
+						<p>Communities struggle to build <strong>resilience</strong> despite their inherent strengths.</p>
+					</article>
+					<article class="c-tile scroll-reveal" style="--sr-delay: 240ms;">
+						<span class="c-tile-num">03</span>
+						<svg class="c-tile-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<polyline points="4,34 12,22 20,26 28,12 36,16" stroke="#E8A33D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<circle cx="36" cy="16" r="3" fill="rgba(232,163,61,0.25)" stroke="#E8A33D" stroke-width="1"/>
+						</svg>
+						<p>Economies underperform because human capability is <strong>underutilised at scale</strong>.</p>
+					</article>
+				</div>
+
+				<!-- The Verdict: Quote -->
+				<div class="c-verdict scroll-reveal">
+					<span class="c-qmark" aria-hidden="true">"</span>
+					<blockquote class="c-verdict-text">
+						<p>This is not a failure of individuals. It is a failure of <em>access</em>, <em>alignment</em>, and <em>system design</em>.</p>
 					</blockquote>
 				</div>
 
-				<div class="about-pillars">
-					<article class="pillar-card scroll-reveal" style="--sr-delay: 80ms;">
-						<span class="pillar-index" style="--pillar: var(--emerald);">01</span>
-						<h3>Education</h3>
-						<p>Education, nutrition, and holistic development programs that give every child a real foundation to grow from.</p>
-					</article>
-					<article class="pillar-card scroll-reveal" style="--sr-delay: 160ms;">
-						<span class="pillar-index" style="--pillar: var(--gold);">02</span>
-						<h3>Health</h3>
-						<p>Taking healthcare services to the doorsteps of hard-to-reach communities, closing gaps that distance and cost create.</p>
-					</article>
-					<article class="pillar-card scroll-reveal" style="--sr-delay: 240ms;">
-						<span class="pillar-index" style="--pillar: var(--navy);">03</span>
-						<h3>Opportunity</h3>
-						<p>Skill training and placement support for underprivileged youth, plus women's empowerment through community engagement.</p>
-					</article>
-				</div>
 			</div>
+		</section>
+		<section class="organic section" id="programs">
+			<div class="organic-inner">
+				<div class="organic-content">
+					<div class="og-manifesto-card">
+						<div class="og-eyebrow scroll-reveal">
+							<span class="og-eyebrow-line"></span>
+							<span class="og-eyebrow-text">The Challenge</span>
+						</div>
 
-			<div class="about-values">
-				<div class="value-row scroll-reveal">
-					<span class="value-mark">—</span>
-					<p>We work <strong>with</strong> communities, not on them — recognising lived experience, cultural identity, and local leadership as non‑negotiable foundations for lasting change.</p>
+						<h2 class="organic-heading scroll-reveal">
+							The challenge is to <em class="og-italic">redesign</em> how access, capability, and opportunity come together.
+						</h2>
+						
+						<p class="organic-lead scroll-reveal">
+							So people are equipped to shape their own futures and systems work in service of human potential.
+						</p>
+
+						<div class="organic-divider scroll-reveal"></div>
+
+						<div class="organic-statement scroll-reveal">
+							<p>This challenge is complex. But it is solvable — when approached with</p>
+							<span class="og-highlight">intent, partnership, and evidence.</span>
+						</div>
+					</div>
 				</div>
-				<div class="value-row scroll-reveal" style="--sr-delay: 80ms;">
-					<span class="value-mark">—</span>
-					<p>Real change happens through collaboration. We co-design solutions with communities, NGOs, institutions, and businesses that are locally relevant, scalable, and sustainable.</p>
-				</div>
-				<div class="value-row scroll-reveal" style="--sr-delay: 160ms;">
-					<span class="value-mark">—</span>
-					<p>Complex problems require conviction. We're willing to challenge norms, test new models, and step into difficult spaces where progress is needed most.</p>
+
+				<div class="organic-visual scroll-reveal">
+					<!-- The layered glow behind the image -->
+					<div class="og-glow"></div>
+					<!-- The fluid morphing image -->
+					<div class="og-blob">
+						<img src="assets/Section 4/child.jpeg" alt="Child painting" class="og-img">
+					</div>
 				</div>
 			</div>
 		</section>
-		<section class="section placeholder" id="programs"><h2>Programs — content coming next</h2></section>
-		<section class="section placeholder" id="impact"><h2>Impact — content coming next</h2></section>
+
+		<section class="fieldboard section" id="impact">
+			<div class="fb-inner">
+
+				<!-- Section Header -->
+				<div class="fb-header">
+					<div class="fb-eyebrow scroll-reveal">Our Approach</div>
+					<h2 class="fb-title scroll-reveal">The Field Strategy</h2>
+					<p class="fb-subtitle scroll-reveal">
+						A people-centred, systems-driven, evidence-led approach — built in the field, not behind a desk.
+					</p>
+				</div>
+
+				<!-- Row 1: First 3 cards -->
+				<div class="fb-notes-row">
+					<div class="fb-note scroll-reveal" style="--rot: -2.5deg; --sr-delay: 0ms;">
+						<div class="fb-pin"></div>
+						<span class="fb-note-num">01</span>
+						<h3>Start with people and context</h3>
+						<p>We begin by listening – deeply. Every program is shaped by lived experience, local knowledge, and cultural context. We invest time upfront to understand real needs, constraints, and aspirations before designing solutions.</p>
+						<div class="fb-note-insight"><span>What this means:</span> No assumptions, no one-size-fits-all models</div>
+					</div>
+					<div class="fb-note scroll-reveal" style="--rot: 1.8deg; --sr-delay: 120ms;">
+						<div class="fb-pin"></div>
+						<span class="fb-note-num">02</span>
+						<h3>Co-design, not top-down delivery</h3>
+						<p>Programs are built with communities, practitioners, and partners – not for them. We share decision-making, test ideas together, and ensure those closest to the challenge help shape the response.</p>
+						<div class="fb-note-insight"><span>What this means:</span> Relevance, ownership, and stronger uptake</div>
+					</div>
+					<div class="fb-note scroll-reveal" style="--rot: -1.2deg; --sr-delay: 240ms;">
+						<div class="fb-pin"></div>
+						<span class="fb-note-num">03</span>
+						<h3>Focus on capability, not dependency</h3>
+						<p>Our aim is to leave people better equipped – not reliant. Programs prioritise skills, knowledge, confidence, and access so participants can continue progressing long after a program ends.</p>
+						<div class="fb-note-insight"><span>What this means:</span> Independence, resilience, and agency</div>
+					</div>
+				</div>
+
+				<!-- Photo Strip between card rows -->
+				<div class="fb-photo-strip">
+					<div class="fb-photo scroll-reveal" style="--rot: -7deg; --dy: -16px; --sr-delay: 100ms;">
+						<img src="assets/Section 2/1.jpeg" alt="Field work">
+						<span>In the Field</span>
+					</div>
+					<div class="fb-photo scroll-reveal" style="--rot: 4deg; --dy: 12px; --sr-delay: 250ms;">
+						<img src="assets/Section 2/2.jpeg" alt="Community">
+						<span>Community</span>
+					</div>
+					<div class="fb-photo scroll-reveal" style="--rot: -5deg; --dy: -10px; --sr-delay: 400ms;">
+						<img src="assets/Section 2/3.jpeg" alt="Learning">
+						<span>Learning</span>
+					</div>
+					<div class="fb-photo scroll-reveal" style="--rot: 6deg; --dy: 8px; --sr-delay: 550ms;">
+						<img src="assets/Section 2/4.jpeg" alt="Growth">
+						<span>Growth</span>
+					</div>
+					<div class="fb-photo scroll-reveal" style="--rot: -4deg; --dy: -14px; --sr-delay: 700ms;">
+						<img src="assets/Section 2/5.jpeg" alt="Impact">
+						<span>Impact</span>
+					</div>
+				</div>
+
+				<!-- Row 2: Last 3 cards -->
+				<div class="fb-notes-row">
+					<div class="fb-note scroll-reveal" style="--rot: 2.2deg; --sr-delay: 360ms;">
+						<div class="fb-pin"></div>
+						<span class="fb-note-num">04</span>
+						<h3>Work at the system level</h3>
+						<p>Individual outcomes matter – but systems determine scale. We identify where education, health, and economic systems are misaligned and work with partners to improve how they connect, operate, and serve people.</p>
+						<div class="fb-note-insight"><span>What this means:</span> Impact that extends beyond individual participants</div>
+					</div>
+					<div class="fb-note scroll-reveal" style="--rot: -1.8deg; --sr-delay: 480ms;">
+						<div class="fb-pin"></div>
+						<span class="fb-note-num">05</span>
+						<h3>Partner to multiply impact</h3>
+						<p>We collaborate with educators, health providers, industry, government, and community organisations. Partnership allows us to combine strengths, share risk, and reach more people than we could alone.</p>
+						<div class="fb-note-insight"><span>What this means:</span> Greater reach, deeper impact</div>
+					</div>
+					<div class="fb-note scroll-reveal" style="--rot: 1.5deg; --sr-delay: 600ms;">
+						<div class="fb-pin"></div>
+						<span class="fb-note-num">06</span>
+						<h3>Measure, learn, and adapt</h3>
+						<p>Every program has clear outcomes and measures from the start. We track progress, learn from what works (and what doesn't), and continuously refine our approach.</p>
+						<div class="fb-note-insight"><span>What this means:</span> Accountability, improvement, and credibility</div>
+					</div>
+				</div>
+
+				<!-- Seed to Plant Transformation Journey -->
+				<div class="fb-metamorphosis scroll-reveal" style="--sr-delay: 200ms;">
+					<div class="fb-transform-header">
+						<p class="fb-transform-label">The Journey of Transformation</p>
+						<h3>From Dependency to Sustainability</h3>
+					</div>
+
+					<div class="meta-wrapper">
+						<!-- The Ground Line SVG -->
+						<svg class="meta-ground-svg" viewBox="0 0 1100 20" preserveAspectRatio="none" aria-hidden="true">
+							<path class="meta-ground-line"
+								d="M 20 10 L 1080 10"
+								fill="none" stroke="rgba(251,248,242,0.15)" stroke-width="2" stroke-linecap="round"/>
+						</svg>
+
+						<!-- The six transformation stages -->
+						<div class="meta-stages">
+
+							<!-- Stage 1: Seed -->
+							<div class="meta-stage" style="--stage-delay: 0ms;">
+								<div class="meta-figure-wrap">
+									<div class="plant-seed"></div>
+								</div>
+								<div class="meta-info">
+									<strong>Dependency</strong>
+									<span>Communities rely on external support</span>
+								</div>
+							</div>
+
+							<!-- Stage 2: Sprout -->
+							<div class="meta-stage" style="--stage-delay: 300ms;">
+								<div class="meta-figure-wrap">
+									<div class="plant-sprout">
+										<div class="p-seed"></div>
+										<div class="p-shoot"></div>
+									</div>
+								</div>
+								<div class="meta-info">
+									<strong>Listen</strong>
+									<span>Understand lived experiences</span>
+								</div>
+							</div>
+
+							<!-- Stage 3: Seedling -->
+							<div class="meta-stage" style="--stage-delay: 600ms;">
+								<div class="meta-figure-wrap">
+									<div class="plant-seedling">
+										<div class="p-stem"></div>
+										<div class="p-leaf p-leaf-left"></div>
+										<div class="p-leaf p-leaf-right"></div>
+									</div>
+								</div>
+								<div class="meta-info">
+									<strong>Co-design</strong>
+									<span>Collaborate with communities</span>
+								</div>
+							</div>
+
+							<!-- Stage 4: Young Plant -->
+							<div class="meta-stage" style="--stage-delay: 900ms;">
+								<div class="meta-figure-wrap">
+									<div class="plant-young">
+										<div class="p-stem"></div>
+										<div class="p-leaf p-leaf-1"></div>
+										<div class="p-leaf p-leaf-2"></div>
+										<div class="p-leaf p-leaf-3"></div>
+										<div class="p-leaf p-leaf-4"></div>
+									</div>
+								</div>
+								<div class="meta-info">
+									<strong>Build Capability</strong>
+									<span>Empower communities to self-sustain</span>
+								</div>
+							</div>
+
+							<!-- Stage 5: Budding -->
+							<div class="meta-stage" style="--stage-delay: 1200ms;">
+								<div class="meta-figure-wrap">
+									<div class="plant-bud">
+										<div class="p-stem"></div>
+										<div class="p-leaf p-leaf-1"></div>
+										<div class="p-leaf p-leaf-2"></div>
+										<div class="p-leaf p-leaf-3"></div>
+										<div class="p-leaf p-leaf-4"></div>
+										<div class="p-bud-top"></div>
+									</div>
+								</div>
+								<div class="meta-info">
+									<strong>Strengthen Systems</strong>
+									<span>Improve infrastructure and processes</span>
+								</div>
+							</div>
+
+							<!-- Stage 6: Flourishing Bloom -->
+							<div class="meta-stage meta-stage-bloom" style="--stage-delay: 1500ms;">
+								<div class="meta-figure-wrap">
+									<div class="plant-flourish">
+										<div class="p-stem"></div>
+										<div class="p-leaf p-leaf-1"></div>
+										<div class="p-leaf p-leaf-2"></div>
+										<div class="p-bloom">
+											<div class="p-bloom-inner">
+												<div class="bloom-petal petal-1"></div>
+												<div class="bloom-petal petal-2"></div>
+												<div class="bloom-petal petal-3"></div>
+												<div class="bloom-petal petal-4"></div>
+												<div class="bloom-center"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="meta-info">
+									<strong>Sustainability</strong>
+									<span>Communities thrive independently</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+
 		<section class="section placeholder" id="resources"><h2>Resources — content coming next</h2></section>
 		<section class="section placeholder" id="contact"><h2>Contact — content coming next</h2></section>
 		<section class="section placeholder" id="support"><h2>Support — content coming next</h2></section>
@@ -182,49 +562,113 @@
 		const navToggle = document.getElementById('navToggle');
 		const primaryNavigation = document.getElementById('primaryNavigation');
 		const navLinks = [...document.querySelectorAll('.nav-link')];
-		const heroImage = document.getElementById('heroImage');
-		const heroImageTag = document.querySelector('.hero-image-tag');
-		const storyCopy = document.getElementById('storyCopy');
+		
+		let activeImg = document.getElementById('heroImage1');
+		let inactiveImg = document.getElementById('heroImage2');
+		
+		const heroImageTag = document.getElementById('heroImageTag');
+		const heroHeading = document.getElementById('heroHeading');
+		const heroSummary = document.getElementById('heroSummary');
 		const storyIndexEl = document.getElementById('storyIndex');
 		const storyPills = [...document.querySelectorAll('.story-pill')];
-		const pathFill = document.getElementById('pathFill');
+		const storyProgressFill = document.getElementById('storyProgressFill');
 		const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 		const storyThemes = [
-			{ image: 'assets/Section 2/1.jpeg', copy: 'Start with people and mentorship that inspires confidence', place: 'Kampala, Uganda', focus: '50% 22%' },
-			{ image: 'assets/Section 2/2.jpeg', copy: 'Hands-on learning that bridges the digital divide for future readiness', place: 'Warsaw, Poland', focus: '50% 28%' },
-			{ image: 'assets/Section 2/3.jpeg', copy: 'Reaching every classroom with access to quality foundational learning', place: 'Accra, Ghana', focus: '50% 22%' },
-			{ image: 'assets/Section 2/4.jpeg', copy: 'Building real skills for the modern economy, one project at a time', place: 'Lagos, Nigeria', focus: '50% 30%' },
-			{ image: 'assets/Section 2/5.jpeg', copy: 'Meeting communities where they are, building strong roots for growth', place: 'Kigali, Rwanda', focus: '50% 25%' }
+			{
+				image: 'assets/Section 2/1.jpeg',
+				heading: ['People.', 'Mentorship.', 'Confidence.'],
+				summary: 'Start with people and mentorship that inspires confidence.',
+				label: 'Mentorship Program',
+				focus: '50% 22%'
+			},
+			{
+				image: 'assets/Section 2/2.jpeg',
+				heading: ['Innovation.', 'Learning.', 'Readiness.'],
+				summary: 'Innovative learning bridging the digital divide for future readiness.',
+				label: 'Digital Skills Program',
+				focus: '50% 28%'
+			},
+			{
+				image: 'assets/Section 2/3.jpeg',
+				heading: ['Access.', 'Reach.', 'Education.'],
+				summary: 'Reaching the most remote communities with access to quality education.',
+				label: 'Community Learning',
+				focus: '50% 22%'
+			},
+			{
+				image: 'assets/Section 2/4.jpeg',
+				heading: ['Skills.', 'Jobs.', 'Future.'],
+				summary: 'Skills for life — preparing youth for the modern economy.',
+				label: 'Youth Employment',
+				focus: '50% 30%'
+			},
+			{
+				image: 'assets/Section 2/5.jpeg',
+				heading: ['Roots.', 'Growth.', 'Curiosity.'],
+				summary: 'Building strong roots for lifelong growth and curiosity.',
+				label: 'Community Action',
+				focus: '50% 25%'
+			}
 		];
-
-		const pathLength = pathFill.getTotalLength();
-		pathFill.style.strokeDasharray = `${pathLength}`;
 
 		const setStoryTheme = (index, opts = {}) => {
 			const theme = storyThemes[index];
 			if (!theme) return;
 
-			heroImage.style.opacity = '0';
-			window.setTimeout(() => {
-				heroImage.src = theme.image;
-				heroImage.alt = theme.copy;
-				heroImage.style.objectPosition = theme.focus;
-				heroImage.style.opacity = '1';
-			}, opts.silent ? 0 : 180);
+			// Double image smooth crossfade (no layout flicker/flashing background)
+			if (opts.silent) {
+				activeImg.src = theme.image;
+				activeImg.alt = theme.heading.join(' ');
+				activeImg.style.objectPosition = theme.focus;
+				activeImg.style.opacity = '1';
+			} else {
+				inactiveImg.src = theme.image;
+				inactiveImg.alt = theme.heading.join(' ');
+				inactiveImg.style.objectPosition = theme.focus;
+				
+				inactiveImg.onload = () => {
+					inactiveImg.style.opacity = '1';
+					inactiveImg.style.zIndex = '2';
+					activeImg.style.opacity = '0';
+					activeImg.style.zIndex = '1';
+					
+					// Swap active/inactive references
+					const temp = activeImg;
+					activeImg = inactiveImg;
+					inactiveImg = temp;
+				};
+			}
 
-			heroImageTag.textContent = theme.place;
-			storyCopy.style.opacity = '0';
+			// Update Dynamic Badge Tag
+			heroImageTag.textContent = theme.label;
+
+			// Fade and update text content (Heading & Summary)
+			heroHeading.style.opacity = '0';
+			heroHeading.style.transform = 'translateY(8px)';
+			heroSummary.style.opacity = '0';
+			heroSummary.style.transform = 'translateY(8px)';
+
 			window.setTimeout(() => {
-				storyCopy.textContent = theme.copy;
-				storyCopy.style.opacity = '1';
-			}, 150);
+				heroHeading.innerHTML = theme.heading
+					.map((line, i) => `<span class="heading-line" style="transition-delay: ${i * 60}ms;">${line}</span>`)
+					.join('\n');
+				
+				heroSummary.textContent = theme.summary;
+				
+				void heroHeading.offsetHeight;
+				void heroSummary.offsetHeight;
+
+				heroHeading.style.opacity = '1';
+				heroHeading.style.transform = 'translateY(0)';
+				heroSummary.style.opacity = '1';
+				heroSummary.style.transform = 'translateY(0)';
+			}, opts.silent ? 0 : 150);
+
 			storyIndexEl.textContent = String(index + 1).padStart(2, '0');
-
 			storyPills.forEach((pill, i) => pill.classList.toggle('is-active', i === index));
-
-			const frac = index / (storyThemes.length - 1);
-			pathFill.style.strokeDashoffset = `${pathLength * (1 - frac)}`;
+			const percentage = (index / (storyThemes.length - 1)) * 100;
+			storyProgressFill.style.width = `${percentage}%`;
 		};
 
 		const setScrolledState = () => navbar.classList.toggle('is-scrolled', window.scrollY > 12);
@@ -235,9 +679,38 @@
 			navLinks.forEach((link) => link.classList.toggle('active', link.getAttribute('href') === targetHash));
 		};
 
+		// Scrollspy calculation based on offset heights (reliable scroll tracking)
+		const scrollspy = () => {
+			const scrollPos = window.scrollY + 120;
+			let activeId = '#home';
+			
+			const sectionsList = navLinks.map((link) => {
+				const id = link.getAttribute('href');
+				return { id, element: document.querySelector(id) };
+			}).filter(item => item.element);
+
+			for (let i = 0; i < sectionsList.length; i++) {
+				const item = sectionsList[i];
+				if (scrollPos >= item.element.offsetTop) {
+					activeId = item.id;
+				}
+			}
+			setActiveLink(activeId);
+		};
+		window.addEventListener('scroll', scrollspy, { passive: true });
+		scrollspy();
+
 		navLinks.forEach((link) => {
-			link.addEventListener('click', () => {
-				setActiveLink(link.getAttribute('href'));
+			link.addEventListener('click', (e) => {
+				e.preventDefault();
+				const targetId = link.getAttribute('href');
+				const targetEl = document.querySelector(targetId);
+				if (targetEl) {
+					window.scrollTo({
+						top: targetEl.offsetTop - 80,
+						behavior: 'smooth'
+					});
+				}
 				primaryNavigation.classList.remove('is-open');
 				navToggle.setAttribute('aria-expanded', 'false');
 			});
@@ -255,7 +728,7 @@
 			autoplayTimer = window.setInterval(() => {
 				currentIndex = (currentIndex + 1) % storyThemes.length;
 				setStoryTheme(currentIndex);
-			}, 5200);
+			}, 6000);
 		};
 		const stopAutoplay = () => window.clearInterval(autoplayTimer);
 
@@ -326,14 +799,6 @@
 			});
 		}, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
 		revealEls.forEach((el) => revealObserver.observe(el));
-
-		const sections = navLinks.map((link) => document.querySelector(link.getAttribute('href'))).filter(Boolean);
-		const observer = new IntersectionObserver((entries) => {
-			entries.forEach((entry) => {
-				if (entry.isIntersecting) setActiveLink(`#${entry.target.id}`);
-			});
-		}, { rootMargin: '-45% 0px -45% 0px', threshold: 0.1 });
-		sections.forEach((section) => observer.observe(section));
 	</script>
 </body>
 </html>
