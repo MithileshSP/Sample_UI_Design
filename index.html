@@ -558,6 +558,12 @@
 	</main>
 
 	<script>
+		// Force page to start at the top on reload
+		if (history.scrollRestoration) {
+			history.scrollRestoration = 'manual';
+		}
+		window.scrollTo(0, 0);
+
 		const navbar = document.getElementById('navbar');
 		const navToggle = document.getElementById('navToggle');
 		const primaryNavigation = document.getElementById('primaryNavigation');
